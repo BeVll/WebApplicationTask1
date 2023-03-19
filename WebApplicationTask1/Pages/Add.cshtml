@@ -1,0 +1,37 @@
+﻿@page
+@model WebApplicationTask1.Pages.AddModel
+@{
+}
+<form method="post" asp-antiforgery="true">
+    <div class="mb-3" style="display: none;">
+        <label asp-for="Book.Id">Id</label><br />
+        <input class="form-control" type="number" asp-for="Book.Id" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="Book.Title">Назва</label><br />
+        <input class="form-control" type="text" asp-for="Book.Title" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="Book.Author">Автор</label><br />
+        <input class="form-control" type="text" asp-for="Book.Author" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="Book.Genre">Genre</label><br />
+        <input class="form-control" type="text" asp-for="Book.Genre" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="Book.ImageSrc">ImageSrc</label><br />
+        <input class="form-control" type="text" asp-for="Book.ImageSrc" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="Book.Publisher">Publisher</label><br />
+        <input class="form-control" type="text" asp-for="Book.Publisher" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="Book.YearOfPublishing">YearOfPublishing</label><br />
+        <input class="form-control" type="number" asp-for="Book.YearOfPublishing" />
+    </div>
+    <button class="btn btn-primary" type="submit">Зберегти</button>
+</form>
+<br />
+<a class="btn btn-outline-primary text-dark" asp-area="" asp-page="/BooksLibrary">Back to Library</a>

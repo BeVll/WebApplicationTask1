@@ -1,0 +1,12 @@
+﻿@page
+@model WebApplicationTask1.Pages.BookInfoModel
+@{
+}
+		<img src="@Model.book.ImageSrc" />
+		<h4>@Model.book.Title</h4>
+		<h4>@Model.book.Author</h4>
+		<h4>@Model.book.Genre</h4>
+		<h4>@Model.book.Publisher</h4>
+		<h4>@Model.book.YearOfPublishing</h4>
+		<a asp-page="./BooksLibrary">Back to Library</a>
+			

@@ -1,0 +1,37 @@
+﻿@page
+@model WebApplicationTask1.Pages.BooksLibraryModel
+@{
+}
+
+<table>
+	<thead>
+		<tr>
+			<th>Id</th>
+			<th>Title</th>
+			<th>Author</th>
+			<th>Genre</th>
+			<th>Publisher</th>
+			<th>Year Of Publishing</th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach(var book in Model.Books){
+			<tr>
+				<td>@book.Id</td>
+				<td>@book.Title</td>
+				<td>@book.Author</td>
+				<td>@book.Genre</td>
+				<td>@book.Publisher</td>
+				<td>@book.YearOfPublishing</td>
+				<td><a asp-page="./BookInfo" asp-route-id=@book.Id>Details</a></td>
+				<td><a asp-page="./Edit" asp-route-id=@book.Id>Edit</a></td>
+				<td>
+					<form method="post">
+						<input style="" class="form-check" name="id" value="@book.Id"/>
+						<button type="submit" class="btn-danger">Delete</button>
+					</form>
+				</td>
+			</tr>
+		}
+	</tbody>
+</table>

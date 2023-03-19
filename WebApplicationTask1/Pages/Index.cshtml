@@ -1,0 +1,17 @@
+﻿
+@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+    
+}
+
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1>Дата:</h1>
+    <p>@DateTime.UtcNow.ToString()</p>
+    
+    <p>@ViewData["MyKey"]</p>
+</div>

@@ -1,0 +1,36 @@
+﻿@page
+@model WebApplicationTask1.Pages.SearchModel
+@{
+}
+<h2>Search</h2>
+<form method="post" >
+    <p>
+        <label >Запит</label><br />
+        <input type="text" name="query"  />
+    </p>
+    <input type="submit" value="Отправить" />
+</form>
+<table>
+	<thead>
+		<tr>
+			<th>Title</th>
+			<th>Author</th>
+			<th>Genre</th>
+			<th>Publisher</th>
+			<th>Year Of Publishing</th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var book in Model.Books)
+		{
+			<tr>
+				<td>@book.Title</td>
+				<td>@book.Author</td>
+				<td>@book.Genre</td>
+				<td>@book.Publisher</td>
+				<td>@book.YearOfPublishing</td>
+				<td><a asp-page="./BookInfo" asp-route-id=@book.Id>Details</a></td>
+			</tr>
+		}
+	</tbody>
+</table>
