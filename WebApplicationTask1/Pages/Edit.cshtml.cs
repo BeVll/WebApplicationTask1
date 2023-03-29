@@ -21,14 +21,15 @@ namespace WebApplicationTask1.Pages
             Book = _bookRepository.GetBookByID(id);
         }
         [HttpPost]
-        public void OnPost()
+        public RedirectResult OnPost()
         {
             if(Book != null)
             {
                 _bookRepository.UpdateBook(Book);
                 _bookRepository.Save();
+               
             }
-            
+            return Redirect("/BooksLibrary");
         }
     }
 }
